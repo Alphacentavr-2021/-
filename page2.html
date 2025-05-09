@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Галерея робіт</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+            font-family: Arial, sans-serif;
+            background: #f4f7fa;
+        }
+        .container {
+            max-width: 1200px;
+            margin: 40px auto 0 auto;
+            padding: 0 16px;
+        }
+        h1 {
+            text-align: center;
+            color: #229ED9;
+            font-size: 2.2rem;
+            font-weight: bold;
+            margin-bottom: 32px;
+        }
+        .gallery {
+            display: grid;
+            grid-template-columns: repeat(4, 1fr);
+            gap: 24px;
+        }
+        .gallery img {
+            width: 100%;
+            aspect-ratio: 4/3;
+            object-fit: cover;
+            border-radius: 16px;
+            box-shadow: 0 2px 12px rgba(34, 158, 217, 0.08);
+            transition: transform 0.2s cubic-bezier(.4,1.5,.5,1);
+        }
+        .gallery img:hover {
+            transform: scale(1.15);
+            z-index: 2;
+            box-shadow: 0 8px 32px rgba(34,158,217,0.18);
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Галерея робіт</h1>
+        <div class="gallery">
+            <a href="https://www.tiktok.com/@mebel_vam/photo/7419291205902634246?is_from_webapp=1&sender_device=pc" target="_blank" style="display:block;position:relative;overflow:hidden;border-radius:16px;box-shadow:0 2px 12px rgba(34,158,217,0.08);transition:box-shadow 0.2s;">
+                <img src="https://static.tiktokcdn.com/img/musically-maliva-obj/1667853896470534~c5_720x720.jpeg" alt="TikTok відео 1" style="width:100%;aspect-ratio:4/3;object-fit:cover;display:block;">
+                <span style="position:absolute;bottom:12px;right:12px;background:rgba(0,0,0,0.7);border-radius:50%;padding:8px;display:flex;align-items:center;justify-content:center;">
+                    <img src="https://cdn.jsdelivr.net/npm/simple-icons@v11/icons/tiktok.svg" alt="TikTok" style="width:28px;height:28px;filter:drop-shadow(0 2px 6px #000);">
+                </span>
+            </a>
+            <img src="8.jpg" alt="Меблі 2">
+            <img src="8.jpg" alt="Меблі 3">
+            <img src="8.jpg" alt="Меблі 4">
+            <!-- Додайте ще зображення за потреби -->
+        </div>
+    </div>
+</body>
+</html>

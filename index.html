@@ -1,0 +1,116 @@
+<!DOCTYPE html>
+<html lang="uk">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Меблі під замовлення</title>
+    <style>
+        body { font-family: Arial, sans-serif; margin: 0; padding: 0; }
+        header { background: #4a6d8c; color: #fff; padding: 40px 0; text-align: center; }
+        .sidebar {
+            height: auto;
+            min-height: 0;
+            max-height: none;
+            width: 0;
+            position: absolute;
+            z-index: 1;
+            top: 165px; /* повернуто як було: 65px + 100px */
+            left: 0;
+            background-color: #4a6d8c;
+            overflow-x: hidden;
+            transition: 0.3s;
+            padding-top: 60px;
+            padding-bottom: 60px;
+            border-top-right-radius: 32px;
+            border-bottom-right-radius: 32px;
+            margin-bottom: 0;
+        }
+        .sidebar a {
+            padding: 10px 30px;
+            text-decoration: none;
+            font-size: 20px;
+            color: #fff;
+            display: block;
+            transition: 0.2s;
+            white-space: nowrap;
+        }
+        .sidebar a img {
+            transition: transform 0.2s cubic-bezier(.4,1.5,.5,1);
+        }
+        .sidebar a:hover img {
+            transform: scale(1.35);
+        }
+        .sidebar a:hover {
+            background: #4a6d8c;
+        }
+        .sidebar .closebtn {
+            position: absolute;
+            top: 10px;
+            right: 20px;
+            font-size: 36px;
+        }
+        #openSidebarBtn {
+            font-size: 24px;
+            cursor: pointer;
+            background: #4a6d8c;
+            color: #fff;
+            border: none;
+            padding: 10px 20px;
+            margin: 20px;
+            border-radius: 4px;
+        }
+        @media (max-width: 600px) {
+            .sidebar a { font-size: 18px; }
+        }
+        .main-image-wrapper {
+            width: 100%;
+            text-align: center;
+            margin: 0;
+            padding: 0;
+            position: relative;
+        }
+        .main-image {
+            width: 100%;
+            max-width: 100vw;
+            height: auto;
+            opacity: 1;
+            display: block;
+            margin: 0 auto;
+            filter: blur(2.5px);
+        }
+    </style>
+</head>
+<body>
+    <div id="mySidebar" class="sidebar">
+        <a href="javascript:void(0)" class="closebtn" onclick="closeSidebar()">&times;</a>
+        <a href="page2.html"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/image.svg" alt="Галерея" style="width:20px;vertical-align:middle;margin-right:8px;">Галерея</a>
+        <a href="page3.html"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/tools.svg" alt="Шурупокрут" style="width:20px;vertical-align:middle;margin-right:8px;">Робочі процеси</a>
+        <a href="page4.html"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/camera-video.svg" alt="Відеокамера" style="width:20px;vertical-align:middle;margin-right:8px;">Робочі відео</a>
+        <a href="page5.html"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/telegram.svg" alt="Telegram" style="width:20px;vertical-align:middle;margin-right:8px;filter:none;">Ми в Telegram</a>
+        <a href="page6.html"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/tiktok.svg" alt="TikTok" style="width:20px;vertical-align:middle;margin-right:8px;filter:none;">Ми в TikTok</a>
+        <a href="page7.html"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/map.svg" alt="Мапа" style="width:20px;vertical-align:middle;margin-right:8px;">Як нас знайти</a>
+        <a href="page8.html"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/telephone.svg" alt="Телефон" style="width:20px;vertical-align:middle;margin-right:8px;">Як з нами зв'язатись</a>
+        <a href="page9.html"><img src="https://cdn.jsdelivr.net/npm/bootstrap-icons@1.11.3/icons/info-circle.svg" alt="Про нас" style="width:20px;vertical-align:middle;margin-right:8px;">Про нас</a>
+    </div>
+    <header>
+        <h1>Вітаю Вас на сайті по виготовленню меблів під замовлення!</h1>
+    </header>
+    <div class="main-image-wrapper" style="position:relative;">
+        <img src="8.jpg" alt="Головне зображення" class="main-image">
+        <button id="openSidebarBtn" onclick="openSidebar()" style="position:absolute;top:20px;left:20px;z-index:2;">☰ Меню</button>
+    </div>
+    <!-- ...далі контент сторінки... -->
+    <script>
+        function openSidebar() {
+            var sidebar = document.getElementById("mySidebar");
+            sidebar.style.width = '320px';
+            document.getElementById("openSidebarBtn").style.display = "none";
+        }
+        function closeSidebar() {
+            var sidebar = document.getElementById("mySidebar");
+            sidebar.style.width = '0';
+            document.getElementById("openSidebarBtn").style.display = "block";
+        }
+    </script>
+</body>
+</html>
